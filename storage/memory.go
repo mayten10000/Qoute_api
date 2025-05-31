@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"sync"
 
-	"quote-service/models"
+	"Qoute_api/models"
 )
 
 type MemoryStorage struct {

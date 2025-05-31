@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/mayten10000/Qoute_api/handlers"
-	"github.com/mayten10000/Qoute_api/router"
-	"github.com/mayten10000/Qoute_api/storage"
+	"Qoute_api/handlers"
+	"Qoute_api/router"
+	"Qoute_api/storage"
 	"log"
 	"net/http"
 )
