@@ -1,12 +1,11 @@
 package main
 
 import (
-	"log"
-	"net/http"
-
 	"github.com/mayten10000/Qoute_api/handlers"
 	"github.com/mayten10000/Qoute_api/router"
 	"github.com/mayten10000/Qoute_api/storage"
+	"log"
+	"net/http"
 )
 
 func main() {

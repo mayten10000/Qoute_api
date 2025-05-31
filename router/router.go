@@ -2,8 +2,8 @@ package router
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/mayten10000/Qoute_api/handlers"
 	"net/http"
+	"quote-service/handlers"
 )
 
 func NewRouter(h *handlers.QuoteHandler) http.Handler {

@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"Qoute_api/models"
-	"Qoute_api/storage"
 	"github.com/gorilla/mux"
+	"quote-service/models"
+	"quote-service/storage"
 )
 
 type QuoteHandler struct {

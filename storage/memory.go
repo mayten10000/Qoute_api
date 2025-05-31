@@ -1,9 +1,10 @@
 package storage
 
 import (
-	"Qoute_api/models"
 	"math/rand"
 	"sync"
+
+	"quote-service/models"
 )
 
 type MemoryStorage struct {
@@ -22,9 +23,9 @@ func NewMemoryStorage() *MemoryStorage {
 func (s *MemoryStorage) AddQuote(q models.Quote) models.Quote {
 	s.Lock()
 	defer s.Unlock()
-	q.Id = s.nextID
+	q.ID = s.nextID
 	s.nextID++
-	s.quotes = append([]models.Quote(nil), s.quotes...)
+	s.quotes = append(s.quotes, q)
 	return q
 }
 
@@ -43,7 +44,7 @@ func (s *MemoryStorage) GetRandom() (models.Quote, bool) {
 	return s.quotes[rand.Intn(len(s.quotes))], true
 }
 
-func (s *MemoryStorage) GetByAuthor(author string) []models.Quotes {
+func (s *MemoryStorage) GetByAuthor(author string) []models.Quote {
 	s.Lock()
 	defer s.Unlock()
 	var result []models.Quote
